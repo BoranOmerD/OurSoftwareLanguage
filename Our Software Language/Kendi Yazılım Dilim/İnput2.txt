@@ -1,0 +1,17 @@
+baslangic
+    tsayi: i = 0;
+    tsayi: sum = 0;
+
+    for (i = 0; i < 10; i = i + 1) {
+        sum = sum + i;
+    }
+
+    ekrana_yaz sum;
+
+    tsayi: x = 5;
+    tsayi: y = 3;
+    tsayi: z;
+
+    z = (x * y) / (x - y);
+    ekrana_yaz z;
+son

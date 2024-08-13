@@ -1,0 +1,31 @@
+%{
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include "y.tab.h"
+%}
+
+%%
+"baslangic"      { return BEGIN; }
+"son"        { return END; }
+";"          { return SEMICOLON; }
+"tsayi:"       { return INT_TYPE; }
+"ksayi:"     { return FLOAT_TYPE; }
+"krktr:"      { return CHAR_TYPE; }
+[a-zA-Z]+    { printf("Kelime: %s\n", yytext); }
+[0-9]+       { printf("Sayı: %s\n", yytext); }
+[\n]         { /* Satır sonu karakteri, işlenmez */ }
+.            { printf("Diğer: %s\n", yytext); }
+
+%%
+int main(int argc, char **argv)
+{
+    // Lex analizörünü başlat
+    yylex();
+
+    return 0;
+}
+
+int yywrap()
+{
+    return 1;
+}

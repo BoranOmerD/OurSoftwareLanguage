@@ -1,0 +1,14 @@
+baslangic
+    tsayi: a = 10;
+    tsayi: b = 5;
+    tsayi: c;
+
+    c = a + b;
+    ekrana_yaz c; // Assuming 'ekrana_yaz' is a function to print to the screen
+
+    if (c > 15) {
+        ekrana_yaz "c is greater than 15";
+    } else {
+        ekrana_yaz "c is not greater than 15";
+    }
+son
